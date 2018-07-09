@@ -14,12 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var userAmount: Double = 0
+    var rate: Double
+    @IBOutlet weak var amount: UITextField!
+    
+    @IBAction func currencyPicked(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+            rate = 1.2
+        }
+        else if sender.sele
     }
-
-
+    
+    @IBOutlet weak var total: UILabel!
+    
+    @IBAction func convertPressed(_ sender: Any) {
+        let amountValue = Double(amount.text!)!
+    }
 }
 
